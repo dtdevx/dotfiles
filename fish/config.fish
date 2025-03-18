@@ -37,6 +37,10 @@ function ll
   ls -lha $colorflag $argv
 end
 
+function lg
+  lazygit $argv
+end
+
 function cl
   clear
 end
