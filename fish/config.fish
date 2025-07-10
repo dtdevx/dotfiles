@@ -116,8 +116,16 @@ function gc
   end
 end
 
+# Dotfiles
+
 function reload-df
   ~/Projects/dotfiles/utils/create_symlinks.sh
+end
+
+# Laravel
+
+function pa
+  php artisan $argv
 end
 
 starship init fish | source

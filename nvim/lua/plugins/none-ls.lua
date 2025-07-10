@@ -10,7 +10,7 @@ return {
             extra_args = {
               "--single-quote",
             },
-            extra_filetypes = { "astro" },
+            extra_filetypes = { "astro", "tsx" },
           }),
         },
       })

@@ -10,7 +10,7 @@ return {
       -- I'll currently keep that turned off to not mess up my
       -- setup here...
       --  auto_install = true,
-      ensure_installed = { "lua", "javascript", "typescript", "php", "html", "css", "go", "astro" },
+      ensure_installed = { "lua", "javascript", "typescript", "php", "html", "css", "go", "astro", "prisma", "tsx", "json" },
       highlight = { enable = true },
       indent = { enable = true },
     })

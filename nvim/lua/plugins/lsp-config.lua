@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "intelephense", "astro", "tailwindcss", "angularls", "html", "gopls" }
+        ensure_installed = { "lua_ls", "ts_ls", "intelephense", "astro", "tailwindcss", "angularls", "html", "gopls", "prismals" }
       })
     end
   },
@@ -30,31 +30,9 @@ return {
       lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
-
-      -- Angular
-      local angularls_path = mason_registry.get_package('angular-language-server'):get_install_path()
-      local angularls_cmd = {
-        'ngserver',
-        '--stdio',
-        '--tsProbeLocations',
-        table.concat({
-          angularls_path,
-          vim.uv.cwd(),
-        }, ','),
-        '--ngProbeLocations',
-        table.concat({
-          angularls_path .. '/node_modules/@angular/language-server',
-          vim.uv.cwd(),
-        }, ','),
-      }
       lspconfig.angularls.setup({
-        cmd = angularls_cmd,
-        on_new_config = function(new_config, new_root_dir)
-          new_config.cmd = angularls_cmd
-        end,
         capabilities = capabilities
       })
-
       lspconfig.html.setup({
         capabilities = capabilities
       })
@@ -68,6 +46,9 @@ return {
         capabilities = capabilities
       })
       lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.prismals.setup({
         capabilities = capabilities
       })
 
