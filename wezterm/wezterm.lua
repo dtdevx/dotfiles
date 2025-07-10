@@ -22,6 +22,9 @@ config.window_padding = {
   bottom = 5,
 }
 
+config.initial_cols = 120
+config.initial_rows = 40
+
 config.window_decorations = "RESIZE"
 
 -- Tweak option keys to type ~ with left option key
