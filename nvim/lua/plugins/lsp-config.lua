@@ -24,36 +24,33 @@ return {
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-
-      local lspconfig = require("lspconfig")
-
-      lspconfig.ts_ls.setup({
+      vim.lsp.config('ts_ls', {
         capabilities = capabilities
       })
-      lspconfig.angularls.setup({
+      vim.lsp.config('angularls', {
         capabilities = capabilities
       })
-      lspconfig.html.setup({
+      vim.lsp.config('html', {
         capabilities = capabilities
       })
-      lspconfig.lua_ls.setup({
+      vim.lsp.config('lua_ls', {
         capabilities = capabilities
       })
-      lspconfig.astro.setup({
+      vim.lsp.config('astro', {
         capabilities = capabilities
       })
-      lspconfig.tailwindcss.setup({
+      vim.lsp.config('tailwindcss', {
         capabilities = capabilities
       })
-      lspconfig.gopls.setup({
+      vim.lsp.config('gopls', {
         capabilities = capabilities
       })
-      lspconfig.prismals.setup({
+      vim.lsp.config('prismals', {
         capabilities = capabilities
       })
 
       -- Lua Language Server
-      lspconfig.lua_ls.setup({
+      vim.lsp.config('lua_ls', {
         settings = {
           Lua = {
             diagnostics = {
@@ -64,7 +61,7 @@ return {
       })
 
       -- PHP Language Server
-      lspconfig.intelephense.setup({
+      vim.lsp.config('intelephense', {
         capabilities = capabilities,
         settings = {
           intelephense = {
